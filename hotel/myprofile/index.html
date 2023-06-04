@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by 田宇翔</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>新增留言</title>
+  <style>
+    .comment {
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f5f5f5;
+    }
+  </style>
+</head>
+<body>
+  <div id="head">
+    <p>大家好  我是生機二田宇翔</p>
+  </div>
+  
+  <div id="left">
+    <h2>興趣</h2>
+    <li>聽音樂
+      <ul>
+        <li>林俊傑</li>
+        <li>原子邦妮</li>
+      </ul>  
+      <img src="https://tse3.mm.bing.net/th?id=OIP.CiEWrVoJBKU-AfdyOsmQ9AHaHa&pid=Api&P=0" alt="原子邦妮" width="200">
+    </li>
+    <li>遊戲
+      <ul>
+        <li>傳說對決</li>
+        <li>神魔之塔</li>
+        <li><del>(宇宙神遊)</del>FGO</li>
+      </ul>
+    </li>
+    <li>運動
+      <ul>
+        <li>羽球</li>
+        <li>桌球</li>
+      </ul>
+    </li>
+    <li><del>輕</del>小說
+      <ul>   
+        <li>貓戰士</li>
+        <li>哈利波特</li>
+        <li>歡迎來到實力至上主義教室</li>
+      </ul>
+    </li>
+  </div>
+  
+  <div id="center">
+    <li>個人喜歡動畫評分
+      <table style="border-color:navy" width="700" cellpadding="20" border="1">
+        <tr><td>作品名</td> <td>時間</td> <td>喜愛程度</td></tr>
+        <tr><td>新世紀福音戰士</td><td>1995</td><td>★★★★★★</td></tr>
+        <tr><td>鋼之鍊金術師</td><td>2003/2010</td><td>★★★★★☆</td></tr>
+        <tr><td>進擊的巨人</td><td>2013</td><td>★★★★☆☆</td></tr>
+        <tr><td>只有我不存在的城市</td><td>2016</td><td>★★★★☆☆</td></tr>
+        <tr><td>遊戲人生</td><td>2014</td><td>★★★★☆☆</td></tr>
+        <tr><td>暗殺教室</td><td>2015</td><td>★★★★★☆</td></tr>
+      </table>
+      <p>這些都超推的啦~</p>
+      <p>大家交個朋友ヾ(*´∀｀*)ﾉ</p>
+      <h1>新增留言</h1>
+  
+      <label for="name">名稱：</label>
+      <input type="text" id="name"><br>
+  
+      <label for="comment">留言內容：</label>
+      <textarea id="comment"></textarea><br>
+  
+      <button onclick="addComment()">新增留言</button>
+  
+      <div id="comments-section"></div>
+    </div>
+  
+  <div id="right">
+    <div id="border">
+      <fieldset>
+        <h3>全台最大間飯店預約平台上線啦!!!</h3>
+        <p>想要在5分鐘內完成飯店預約嗎?</p>
+        <p>想要體驗飯店內各項娛樂設施嗎?</p>
+        <p>心動不如馬上行動!!!</p>
+        <a href="https://benson920119.github.io/personalprofile.github.io/hotel/index.html" target="_blank">點擊預約</a>
+      </fieldset>
+    </div>
+  </div>
+  
+  <div id="footer">
+    <p>感謝觀賞</p>
+  </div>
+  
+  <script>
+    function addComment() {
+      // 取得輸入的名稱和留言內容
+      var name = document.getElementById("name").value;
+      var comment = document.getElementById("comment").value;
+
+      // 建立新的留言元素
+      var newComment = document.createElement("div");
+      newComment.className = "comment";
+
+      // 建立名稱元素
+      var nameElement = document.createElement("h4");
+      nameElement.innerText = name;
+      
+      // 建立留言內容元素
+      var commentElement = document.createElement("p");
+      commentElement.innerText = comment;
+
+      // 將名稱和留言內容元素加入留言元素
+      newComment.appendChild(nameElement);
+      newComment.appendChild(commentElement);
+
+      // 將留言元素加入留言區域
+      var commentsSection = document.getElementById("comments-section");
+      commentsSection.appendChild(newComment);
+
+      // 清空輸入欄位
+      document.getElementById("name").value = "";
+      document.getElementById("comment").value = "";
+    }
+  </script>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
