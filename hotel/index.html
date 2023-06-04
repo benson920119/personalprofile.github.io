@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - 飯店</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html>
+<head>
+<title>飯店</title>
+<body>  
+<div id="head">
+ <p>歡迎來到XX飯店</p>
+</div>  
+<div class="container">
+		<div class="container">
+		<div class="box box1"><label for="date">訂房時間:</label>
+		<input name="date" type="date" id="date"><br>
+		<label for="room-type">房間類型:</label>
+		<select id="room-type">
+    <option value="0">房間選擇</option>
+    <option value="1">雙人房</option>
+    <option value="2">家庭房</option>
+    <option value="3">總統套房</option>
+  </select><br></div>
+		<div class="box box2"><label for="facility">預約設施 (每個時段只能選擇一項)</label>  <select id="facility" name="facility">
+    <option value="0">無</option>
+    <option value="1">游泳池</option>
+    <option value="2">健身房</option>
+    <option value="3">遊戲室</option>
+    <option value="4">射箭場</option>
+    <option value="5">電影院</option>
+  </select> 預約時段: <input name="time" type="time"value="17:00"><br></div>
+		<div class="box box3">聯絡人姓名:&nbsp;&nbsp;
+     <input type="text">&nbsp;&nbsp;
+ 性別: <input name="gender" type="radio" value="male">男
+    <input name="gender" type="radio" value="female">女
+    <input name="gender" type="radio" value="other">其他 &nbsp;&nbsp;
+    連絡電話: <input type="text"><br>
+  <label for="description">
+    </div>
+  <div class="box box4">  
+    備註:</label></br>
+  <textarea id="description" name="description"></textarea><br>
+  <input type="button" onclick="addRoom()" value="新增">
+  <input type="reset" value="重新選擇">
+<input type="submit" value="送出">    
+</form></div>
+	</div>
+</body>
+</head>
+<!-- partial -->
+  
+</body>
+</html>
